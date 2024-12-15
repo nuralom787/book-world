@@ -1,0 +1,104 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "The Silent Patient",
+        "author": "Alex Michaelides",
+        "image": "https://i.postimg.cc/C1nzsDz6/kindpng-7318921.png",
+        "review": "An intense psychological thriller that keeps you guessing until the very end. The twists are mind-boggling, and the character development is superb.",
+        "totalPages": 336,
+        "rating": 4.5,
+        "category": "Psychological Thriller",
+        "tags": [
+            "Thriller",
+            "Mystery",
+            "Psychological"
+        ],
+        "publisher": "Celadon Books",
+        "yearOfPublishing": 2019
+    },
+    {
+        "bookId": 2,
+        "bookName": "Educated",
+        "author": "Tara Westover",
+        "image": "https://i.postimg.cc/C1nzsDz6/kindpng-7318921.png",
+        "review": "A powerful memoir of a woman who grew up in a survivalist family and fought her way to education. It's a deeply inspiring story of resilience and self-discovery.",
+        "totalPages": 400,
+        "rating": 4.7,
+        "category": "Memoir",
+        "tags": [
+            "Biography",
+            "Memoir",
+            "Inspirational"
+        ],
+        "publisher": "Random House",
+        "yearOfPublishing": 2018
+    },
+    {
+        "bookId": 3,
+        "bookName": "Where the Crawdads Sing",
+        "author": "Delia Owens",
+        "image": "https://i.postimg.cc/C1nzsDz6/kindpng-7318921.png",
+        "review": "A beautifully written coming-of-age story intertwined with mystery. The setting and the emotional depth of the characters make this a truly compelling read.",
+        "totalPages": 368,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": [
+            "Mystery",
+            "Drama",
+            "Nature"
+        ],
+        "publisher": "G.P. Putnam's Sons",
+        "yearOfPublishing": 2018
+    },
+    {
+        "bookId": 4,
+        "bookName": "The Midnight Library",
+        "author": "Matt Haig",
+        "image": "https://i.postimg.cc/C1nzsDz6/kindpng-7318921.png",
+        "review": "A thought-provoking novel about regret, choices, and the infinite possibilities of life. It explores deep philosophical themes while remaining accessible and heartwarming.",
+        "totalPages": 304,
+        "rating": 4.4,
+        "category": "Fantasy",
+        "tags": [
+            "Fantasy",
+            "Philosophical",
+            "Self-Help"
+        ],
+        "publisher": "Viking",
+        "yearOfPublishing": 2020
+    },
+    {
+        "bookId": 5,
+        "bookName": "Atomic Habits",
+        "author": "James Clear",
+        "image": "https://i.postimg.cc/C1nzsDz6/kindpng-7318921.png",
+        "review": "A practical guide to building good habits and breaking bad ones. The advice is actionable and based on scientific research, making it a valuable resource for personal growth.",
+        "totalPages": 320,
+        "rating": 4.8,
+        "category": "Self-Help",
+        "tags": [
+            "Personal Development",
+            "Productivity",
+            "Non-fiction"
+        ],
+        "publisher": "Avery",
+        "yearOfPublishing": 2018
+    },
+    {
+        "bookId": 6,
+        "bookName": "The Night Circus",
+        "author": "Erin Morgenstern",
+        "image": "https://i.postimg.cc/C1nzsDz6/kindpng-7318921.png",
+        "review": "A magical and atmospheric novel that transports readers into a world of wonder. The enchanting circus and its mysterious characters make it a captivating fantasy.",
+        "totalPages": 512,
+        "rating": 4.3,
+        "category": "Fantasy",
+        "tags": [
+            "Fantasy",
+            "Magical Realism",
+            "Romance"
+        ],
+        "publisher": "Doubleday",
+        "yearOfPublishing": 2011
+    }
+]
