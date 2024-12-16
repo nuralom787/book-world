@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { SaveReadBooksInLS, SaveWishlistInLS } from "../Utility/Localstorage";
 
 const BookDetails = () => {
     const { id } = useParams();
@@ -16,6 +17,16 @@ const BookDetails = () => {
                 setBook(idBook)
             })
     }, []);
+
+
+    const handleBooksSave = (props) => {
+        if (props === "read") {
+            SaveReadBooksInLS(parseInt(id), bookName);
+        } else {
+            SaveWishlistInLS(parseInt(id), bookName);
+        }
+    }
+
 
 
     return (
@@ -60,8 +71,8 @@ const BookDetails = () => {
                         </div>
                     </div>
                     <div className="space-x-8">
-                        <button className="border border-[#131313] font-semibold text-lg text-[#131313] px-6 py-2 rounded-lg">Read</button>
-                        <button className="border border-[#50B1C9] bg-[#50B1C9] font-semibold text-lg text-white px-6 py-2 rounded-lg">Wishlist</button>
+                        <button onClick={() => handleBooksSave("read")} className="border border-[#131313] font-semibold text-lg text-[#131313] px-6 py-2 rounded-lg">Read</button>
+                        <button onClick={() => handleBooksSave("wishlist")} className="border border-[#50B1C9] bg-[#50B1C9] font-semibold text-lg text-white px-6 py-2 rounded-lg">Wishlist</button>
                     </div>
                 </div>
             </div>
