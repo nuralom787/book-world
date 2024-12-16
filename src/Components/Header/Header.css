@@ -1,5 +1,4 @@
-
-a{
+ul a {
     font-size: 18px;
     font-weight: 400;
     color: #131313;
@@ -7,9 +6,18 @@ a{
     padding: 0.5rem 1rem;
 }
 
+ul a:hover {
+    font-size: 18px;
+    font-weight: 600;
+    color: #23BE0A;
+    padding: 0.5rem 1rem;
+    border: 1px solid #23BE0A;
+    border-radius: 8px;
+    margin: 0 0.75rem;
+}
 
 
-a.active{
+ul a.active {
     font-size: 18px;
     font-weight: 600;
     color: #23BE0A;

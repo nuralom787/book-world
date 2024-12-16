@@ -1,13 +1,19 @@
 import { MdOutlineStarBorder } from "react-icons/md";
+import { useNavigate } from "react-router";
 
 
 
 const Book = ({ book }) => {
-    const { bookName, author, image, rating, category, tags } = book;
+    const { bookId, bookName, author, image, rating, category, tags } = book;
+    const navigate = useNavigate();
+
+    const handleBookDetails = (id, title) => {
+        navigate(`/details/${title}/${id}`);
+    }
 
     return (
         <div>
-            <div className="card border">
+            <div onClick={() => handleBookDetails(bookId, bookName)} className="card border border-black cursor-pointer">
                 <figure className="m-6 p-10 rounded-xl bg-gray-300">
                     <img
                         src={image}

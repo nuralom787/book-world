@@ -5,6 +5,7 @@ import Main from './Components/Main/Main';
 import Home from './Components/Home/Home';
 import ListedBook from './Components/ListedBook/ListedBook';
 import PageToRead from './Components/PageToRead/PageToRead';
+import BookDetails from './Components/BookDetails/BookDetails';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             <Route path='/' element={<Home></Home>}></Route>
             <Route path='/listed-book' element={<ListedBook></ListedBook>}></Route>
             <Route path='/pageToRead' element={<PageToRead></PageToRead>}></Route>
+            <Route path='/details/:title/:id' element={<BookDetails></BookDetails>}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
