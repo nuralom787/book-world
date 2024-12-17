@@ -10,6 +10,7 @@ const ListedBook = () => {
     const [listedBooks, setListedBooks] = useState([]);
     const [readBooks, setReadBooks] = useState([]);
     const [wishlistBooks, setWishlistBooks] = useState([]);
+    const [sort, setSort] = useState("");
 
 
     useEffect(() => {
@@ -40,6 +41,35 @@ const ListedBook = () => {
     }, [tab, listedBooks]);
 
 
+    // Handle Sorting Function.
+    useEffect(() => {
+        if (tab === "read-books") {
+            if (sort === "rating") {
+                const sortData = readBooks.sort((a, b) => b.rating - a.rating);
+                setReadBooks(sortData);
+            } else if (sort === "nop") {
+                const sortData = readBooks.sort((a, b) => b.totalPages - a.totalPages);
+                setReadBooks(sortData);
+            } else if (sort === "PYear") {
+                const sortData = readBooks.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+                setReadBooks(sortData);
+            }
+        } else if (tab === "wishlist") {
+            if (sort === "rating") {
+                const sortData = wishlistBooks.sort((a, b) => b.rating - a.rating);
+                setWishlistBooks(sortData);
+            } else if (sort === "nop") {
+                const sortData = wishlistBooks.sort((a, b) => b.totalPages - a.totalPages);
+                setWishlistBooks(sortData);
+            } else if (sort === "PYear") {
+                const sortData = wishlistBooks.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+                setWishlistBooks(sortData);
+            }
+        };
+    }, [sort]);
+
+
+
 
     return (
         <div>
@@ -51,10 +81,16 @@ const ListedBook = () => {
                     <div tabIndex={0} role="button" className="m-1 bg-[#23BE0A] px-5 py-2 flex items-center gap-2">
                         Sort By <IoIosArrowDown className="text-2xl" />
                     </div>
-                    <ul tabIndex={0} className="dropdown-content bg-[#23BE0A] rounded-md z-[1] w-52 p-2 shadow">
-                        <li className="my-4 mx-2"><button>Rating</button></li>
-                        <li className="my-4 mx-2"><button>Number Of Pages</button></li>
-                        <li className="my-4 mx-2"><button>Publishing Year</button></li>
+                    <ul tabIndex={0} className="dropdown-content bg-[#23BE0A] rounded-md z-[1] w-52 shadow">
+                        <li onClick={() => setSort("rating")} className="hover:bg-white hover:text-[#131313] font-bold rounded duration-100 m-1 p-2">
+                            <button>Rating</button>
+                        </li>
+                        <li onClick={() => setSort("nop")} className="hover:bg-white hover:text-[#131313] font-bold rounded duration-100 m-1 p-2">
+                            <button>Number Of Pages</button>
+                        </li>
+                        <li onClick={() => setSort("PYear")} className="hover:bg-white hover:text-[#131313] font-bold rounded duration-100 m-1 p-2">
+                            <button>Publishing Year</button>
+                        </li>
                     </ul>
                 </div>
             </div>
