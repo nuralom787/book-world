@@ -23,13 +23,15 @@ const Header = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow space-y-2">
                             <NavLink to={`/`}>Home</NavLink>
                             <NavLink to={`/listed-books`}>Listed Book</NavLink>
                             <NavLink to={`/pageToRead`}>Pages To Read</NavLink>
+                            <button className="font-semibold text-lg text-white bg-[#23BE0A] px-6 py-2 rounded-md block md:hidden">Sign In</button>
+                            <button className="font-semibold text-lg text-white bg-[#59C6D2] px-6 py-2 rounded-md block md:hidden">Sign Up</button>
                         </ul>
                     </div>
-                    <Link to={"/"} className="text-3xl font-bold text-[#131313] p-0 m-0">Book World</Link>
+                    <Link to={"/"} className="text-xl md:text-3xl font-bold text-[#131313] p-0 m-0">Book World</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal items-center px-1">
@@ -39,8 +41,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-4">
-                    <button className="font-semibold text-lg text-white bg-[#23BE0A] px-6 py-2 rounded-md">Sign In</button>
-                    <button className="font-semibold text-lg text-white bg-[#59C6D2] px-6 py-2 rounded-md">Sign Up</button>
+                    <button className="font-semibold text-lg text-white bg-[#23BE0A] px-6 py-2 rounded-md hidden md:block">Sign In</button>
+                    <button className="font-semibold text-lg text-white bg-[#59C6D2] px-6 py-2 rounded-md hidden md:block">Sign Up</button>
                 </div>
             </div>
         </div>
