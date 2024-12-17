@@ -18,7 +18,7 @@ const Book = ({ book }) => {
     return (
         <div>
             <div onClick={() => handleBookDetails(bookId, bookName)} className="card border cursor-pointer">
-                <figure className="m-6 p-10 rounded-xl bg-gray-300">
+                <figure className="m-6 p-10 rounded-xl bg-gray-200">
                     <img
                         src={image}
                         alt={bookName}

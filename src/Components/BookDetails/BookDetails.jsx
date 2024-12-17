@@ -30,24 +30,24 @@ const BookDetails = () => {
 
 
     return (
-        <div className="my-40">
-            <div className="flex justify-between gap-8">
-                <div className="flex-1 bg-gray-300 mx-4 p-32 rounded-2xl">
-                    <img className="mx-auto" src={image} alt={book.bookName} />
+        <div className="my-8 lg:my-28">
+            <div className="flex flex-col md:flex-row justify-between gap-8">
+                <div className="flex-1 bg-gray-200 px-8 py-2 md:p-16 rounded-2xl">
+                    <img className="object-contain h-[30rem] w-[35rem]" src={image} alt={book.bookName} />
                 </div>
-                <div className="flex-1 space-y-6">
+                <div className="space-y-6 flex-1">
                     <h1 className="font-bold text-4xl text-[#131313]">{bookName}</h1>
                     <p className="font-medium text-xl text-[#131313CC]">By: {author}</p>
                     <hr />
                     <p className="font-medium text-xl text-[#131313CC]">{category}</p>
                     <hr />
                     <p className="font-normal text-base text-[#131313B3]"><span className="font-bold text-base text-[#131313]">Review: </span>{review}</p>
-                    <div className="w-max">
-                        <span className="font-bold text-base text-[#131313] mr-6">Tags: </span>
+                    <div className="w-max flex flex-col lg:flex-row items-start lg:items-center gap-6">
+                        <span className="font-bold text-base text-[#131313]">Tags: </span>
                         {
                             tags?.map(tag => <span
                                 key={tag}
-                                className="font-medium text-base text-[#23BE0A] px-5 py-2 rounded-full bg-[#23BE0A0D] mr-4"
+                                className="font-medium text-base text-[#23BE0A] px-5 py-2 rounded-full bg-[#23BE0A0D]"
                             >#{tag}</span>)
                         }
                     </div>

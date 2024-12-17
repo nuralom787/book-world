@@ -1,10 +1,5 @@
 import { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { SlLocationPin } from "react-icons/sl";
-import { HiOutlineUsers } from "react-icons/hi2";
-import { MdOutlineFindInPage } from "react-icons/md";
-import './ListedBook.css';
-import { NavLink } from "react-router";
 import ReadBooks from "../ListedBookTabs/ReadBooks";
 import WishlistBooks from "../ListedBookTabs/WishlistBooks";
 import { getReadBooksFromLS, getWishlistFromLS } from "../Utility/Localstorage";
@@ -48,7 +43,7 @@ const ListedBook = () => {
 
     return (
         <div>
-            <div className="bg-gray-300 text-center p-16 rounded-2xl my-16">
+            <div className="bg-gray-200 text-center p-16 rounded-2xl mt-4 mb-16 lg:my-16">
                 <h1 className="font-bold text-3xl text-[#131313]">Listed Books</h1>
             </div>
             <div className="text-center">
