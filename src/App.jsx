@@ -6,6 +6,7 @@ import Home from './Components/Home/Home';
 import ListedBook from './Components/ListedBook/ListedBook';
 import PageToRead from './Components/PageToRead/PageToRead';
 import BookDetails from './Components/BookDetails/BookDetails';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <Route path='/pageToRead' element={<PageToRead></PageToRead>}></Route>
             <Route path='/details/:title/:id' element={<BookDetails></BookDetails>}></Route>
           </Route>
+          <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
       </BrowserRouter>
     </>

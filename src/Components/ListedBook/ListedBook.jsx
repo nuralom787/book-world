@@ -33,7 +33,6 @@ const ListedBook = () => {
                 readBookData.push(readBooks);
             }
             setReadBooks(readBookData);
-            console.log(readBookData)
         } else if (tab === "wishlist" && listedBooks.length) {
             const wishlistBookId = getWishlistFromLS();
             const wishlistBookData = [];
@@ -42,7 +41,6 @@ const ListedBook = () => {
                 wishlistBookData.push(wishlistBooks);
             }
             setWishlistBooks(wishlistBookData);
-            console.log(wishlistBookData)
         }
     }, [tab, listedBooks]);
 
@@ -66,9 +64,9 @@ const ListedBook = () => {
                 </div>
             </div>
             <div className="my-16">
-                <div className="border-b border-gray-400">
-                    <button onClick={() => setTab("read-books")} className={tab == "read-books" ? "bg-white font-normal text-lg text-[#131313CC] px-6 py-3 rounded-ss-md rounded-se-md top-[1px] relative border border-b-0 border-gray-500 mr-6" : "bg-white font-normal text-lg text-[#131313CC] px-6 py-3 rounded-ss-md rounded-se-md mr-6"}>Read Books</button>
-                    <button onClick={() => setTab("wishlist")} className={tab == "wishlist" ? "bg-white font-normal text-lg text-[#131313CC] px-6 py-3 rounded-ss-md rounded-se-md top-[1px] relative border border-b-0 border-gray-500 mr-6" : "bg-white font-normal text-lg text-[#131313CC] px-6 py-3 rounded-ss-md rounded-se-md mr-6"}>Wishlist Books</button>
+                <div className="border-b border-gray-400 flex justify-between items-center">
+                    <button onClick={() => setTab("read-books")} className={tab == "read-books" ? "bg-white font-normal text-lg text-[#131313CC] px-6 py-3 rounded-ss-md rounded-se-md top-[1px] relative border border-b-0 border-gray-500 grow" : "grow bg-white font-normal text-lg text-[#131313CC] px-6 py-3 rounded-ss-md rounded-se-md"}>Read Books</button>
+                    <button onClick={() => setTab("wishlist")} className={tab == "wishlist" ? "bg-white font-normal text-lg text-[#131313CC] px-6 py-3 rounded-ss-md rounded-se-md top-[1px] relative border border-b-0 border-gray-500 grow" : "grow bg-white font-normal text-lg text-[#131313CC] px-6 py-3 rounded-ss-md rounded-se-md"}>Wishlist Books</button>
                 </div>
                 <div className="space-y-6 mt-6">
                     {tab == "read-books" &&
