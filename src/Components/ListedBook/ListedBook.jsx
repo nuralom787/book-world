@@ -3,6 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import ReadBooks from "../ListedBookTabs/ReadBooks";
 import WishlistBooks from "../ListedBookTabs/WishlistBooks";
 import { getReadBooksFromLS, getWishlistFromLS } from "../Utility/Localstorage";
+import { Helmet } from "react-helmet-async";
 
 
 const ListedBook = () => {
@@ -73,6 +74,9 @@ const ListedBook = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Book World | Listed Books</title>
+            </Helmet>
             <div className="bg-gray-200 text-center p-16 rounded-2xl mt-4 mb-16 lg:my-16">
                 <h1 className="font-bold text-3xl text-[#131313]">Listed Books</h1>
             </div>

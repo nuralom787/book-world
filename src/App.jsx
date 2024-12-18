@@ -7,21 +7,24 @@ import ListedBook from './Components/ListedBook/ListedBook';
 import PageToRead from './Components/PageToRead/PageToRead';
 import BookDetails from './Components/BookDetails/BookDetails';
 import NotFound from './Components/NotFound/NotFound';
+import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Main></Main>}>
-            <Route path='/' element={<Home></Home>}></Route>
-            <Route path='/listed-books' element={<ListedBook></ListedBook>}></Route>
-            <Route path='/pageToRead' element={<PageToRead></PageToRead>}></Route>
-            <Route path='/details/:title/:id' element={<BookDetails></BookDetails>}></Route>
-          </Route>
-          <Route path='*' element={<NotFound></NotFound>}></Route>
-        </Routes>
+        <HelmetProvider>
+          <Routes>
+            <Route path='/' element={<Main></Main>}>
+              <Route path='/' element={<Home></Home>}></Route>
+              <Route path='/listed-books' element={<ListedBook></ListedBook>}></Route>
+              <Route path='/pageToRead' element={<PageToRead></PageToRead>}></Route>
+              <Route path='/details/:title/:id' element={<BookDetails></BookDetails>}></Route>
+            </Route>
+            <Route path='*' element={<NotFound></NotFound>}></Route>
+          </Routes>
+        </HelmetProvider>
       </BrowserRouter>
     </>
   )

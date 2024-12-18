@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { SaveReadBooksInLS, SaveWishlistInLS } from "../Utility/Localstorage";
+import { Helmet } from "react-helmet-async";
 
 const BookDetails = () => {
     const { id } = useParams();
@@ -31,6 +32,9 @@ const BookDetails = () => {
 
     return (
         <div className="my-8 lg:my-28">
+            <Helmet>
+                <title>Book World | Book Details</title>
+            </Helmet>
             <div className="flex flex-col md:flex-row justify-between gap-8">
                 <div className="flex-1 bg-gray-200 px-8 py-2 md:p-16 rounded-2xl">
                     <img className="object-contain h-[30rem] w-[35rem]" src={image} alt={book.bookName} />

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { getReadBooksFromLS } from '../Utility/Localstorage';
+import { Helmet } from 'react-helmet-async';
 
 const PageToRead = () => {
     const [readBooks, setReadBooks] = useState([]);
@@ -34,6 +35,9 @@ const PageToRead = () => {
 
     return (
         <div className='w-full h-[700px] my-12'>
+            <Helmet>
+                <title>Book World | Page To Read</title>
+            </Helmet>
             <ResponsiveContainer>
                 <BarChart
                     className='mx-auto bg-gray-200 rounded-xl'
